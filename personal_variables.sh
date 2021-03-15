@@ -1,6 +1,6 @@
 #github/git config
-git config --global user.name "Apon77"
-git config --global user.email "khalakuzzamanapon5@gmail.com"
+git config --global user.name "phone"
+git config --global user.email "phone@gmail.com"
 git config --global core.editor vim
 git config --global credential.helper store #dont use this in pc which access other people access
 

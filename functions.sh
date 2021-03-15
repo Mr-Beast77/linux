@@ -41,23 +41,23 @@ gcla() {
 	git clone --recurse-submodules https://github.com/Apon77/$1
 }
 
-#upload limit 500MB and 24 Hours
 up() {
 	curl --upload-file $1 https://free.keep.sh
+	#upload limit 500MB and 24 Hours
 }
 
-#upload limit 25GB, 3 Days and 1 time download
 up2() {
 	curl https://bashupload.com/$(basename $1) --data-binary @$1
+	#upload limit 25GB, 3 Days and 1 time download
 }
 
 up3() {
 	curl -F file=@$1 https://api.anonymousfiles.io/
 }
 
-# 14 days, 10 GB
 up4() {
 	curl --upload-file $1 https://transfer.sh/$(basename $1); echo
+	# 14 days, 10 GB
 }
 #speed test
 st() {
@@ -75,10 +75,10 @@ fi
 
 # Usages tg id msg
 tg(){
-bot_api=1336436573:AAFpaGsPLEc90A9LBObk6kSXDvjrySmQH14
+bot_api=1692865707:AAHvKZogI5sUGtqjd2sZvNl8tib0Q_xcYkY
 your_telegram_id=$1
 msg=$2
-curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" --data "text=$msg&chat_id=${your_telegram_id}" 1>/dev/null
+curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" --data "text=$msg&chat_id=${your_telegram_id}"
 }
 
 #github/git config
