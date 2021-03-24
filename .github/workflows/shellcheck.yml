@@ -1,0 +1,10 @@
+name: shellcheck
+on: push
+
+jobs:
+  job1:
+    name: shellcheck
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ludeeus/action-shellcheck@1.0.0
